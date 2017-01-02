@@ -52,7 +52,7 @@ ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 2368
 
 #Start in production mode
-#CMD ["npm", "start"]
+#CMD ["npm", "start"] - uncomment this line and comment out below for dev mode 
 
 RUN chown -R user:user /usr/src/ghost/
 CMD ["npm", "start", "--production"]
