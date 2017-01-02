@@ -50,4 +50,10 @@ COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 2368
-CMD ["npm", "start"]
+
+#Start in production mode
+#CMD ["npm", "start"]
+
+RUN chown -R user:user /usr/src/ghost/
+CMD ["npm", "start", "--production"]
+
